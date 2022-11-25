@@ -1,23 +1,22 @@
-import java.io.*;
+package core.src;
+
+import java.lang.Class;
 import java.util.*;
-import java.text.*;
-import java.math.*;
 import java.lang.*;
-import java.util.regex.*;
 
 public class WeekSchedule {
-    private ArrayList<Class> schedule;
+    private ArrayList<java.lang.Class> schedule;
 
-    public ArrayList<Class> getSchedule() {
+    public ArrayList<java.lang.Class> getSchedule() {
         return schedule;
     }
 
-    public ArrayList<Class> addClass(Class newClass){
+    public ArrayList<java.lang.Class> addClass(java.lang.Class newClass){
         this.schedule.add(newClass);
         return schedule;
     }
 
-    public ArrayList<Class> addClasses(ArrayList<Class> classesList){
+    public ArrayList<java.lang.Class> addClasses(ArrayList<Class> classesList){
         this.schedule.addAll(classesList);
         return schedule;
     }

@@ -1,35 +1,7 @@
+package core.src;
 
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
 import java.lang.*;
-import java.util.regex.*;
-//import ../user/src/*;
-
-enum TeacherType {
-    TA
-}
-
-enum Grade {
-    A,
-    Aneg,
-    B,
-    Bneg,
-    C,
-    Cneg,
-    D,
-    E,
-    NA
-}
-enum ExamType{
-    OpenBook,
-    ClosedBook
-}
-
-
-
 
 public abstract class Evaluative
 {
@@ -59,7 +31,7 @@ public abstract class Evaluative
     public void setDate(String date) {
         this.date = date;
     }
-    public Evaluative (String date, String course, String time, int totalMarks, ExamType type)
+    Evaluative (String date, String course, String time, int totalMarks, ExamType type)
     {
         this.date = date;
         this.course = course;

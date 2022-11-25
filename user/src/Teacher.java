@@ -1,9 +1,8 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
+package user.src;
+
 import java.lang.*;
-import java.util.regex.*;
+
+import core.src.*;
 
 public class Teacher extends User{
 

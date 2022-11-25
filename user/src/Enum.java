@@ -1,9 +1,4 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.lang.*;
-import java.util.regex.*;
+package user.src;
 
 enum TeacherType {
     Professor,
@@ -11,5 +6,4 @@ enum TeacherType {
 }
 
 public enum Enum {
-    LITE
 }

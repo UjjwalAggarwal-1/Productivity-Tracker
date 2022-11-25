@@ -1,9 +1,8 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
+package core.src;
+
 import java.lang.*;
-import java.util.regex.*;
+
+import user.src.*;
 
 public class Class {
     private ClassType classType;

@@ -9,7 +9,6 @@ import java.util.regex.*;
 //import ../user/src/*;
 
 enum TeacherType {
-    Professor,
     TA
 }
 

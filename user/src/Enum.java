@@ -5,7 +5,11 @@ import java.math.*;
 import java.lang.*;
 import java.util.regex.*;
 
-public enum TeacherType {
+enum TeacherType {
     Professor,
     TA
+}
+
+public enum Enum {
+    LITE
 }

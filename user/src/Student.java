@@ -8,6 +8,7 @@ import java.text.*;
 import java.math.*;
 import java.lang.*;
 import java.util.regex.*;
+import java.sql.*;
 
 
 public class Student extends User{
@@ -71,6 +72,62 @@ public class Student extends User{
         this.password = encrypt(password);
     }
 
+    public void createTable(){
+        final String CONNECTION = "jdbc:mysql://localhost:3306/ProductivityTracker";
+        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
+        try(Connection conn = DriverManager.getConnection(CONNECTION, "root", "safemysql");
+            Statement statement = conn.createStatement()){
+
+            statement.executeUpdate("create table Students ( name varchar(100), email varchar(50),"+
+                    "bitsid varchar(50), cg float, password varchar(100) );");
+            System.out.println("created successfully");
+
+        }catch(SQLException e){
+            System.out.println("HELLO in catch");
+
+            e.printStackTrace();
+        }
+        return;
+    }
+
+    public void save(){
+        final String CONNECTION = "jdbc:mysql://localhost:3306/ProductivityTracker";
+        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
+        try(Connection conn = DriverManager.getConnection(CONNECTION, "root", "safemysql");
+            Statement statement = conn.createStatement()){
+
+            statement.executeUpdate("insert into Students values( '"+this.getName()+"', '"+this.getEmail()
+                    +"', '" + this.getBitsId()+"', 0,'"+ password+"');");
+
+            System.out.println("added successfully");
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return;
+    }
+
+    public boolean login(String username, String Password){
+        final String CONNECTION = "jdbc:mysql://localhost:3306/ProductivityTracker";
+        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
+
+        boolean res ;
+
+        try(Connection conn = DriverManager.getConnection(CONNECTION, "root", "safemysql");
+            Statement statement = conn.createStatement();
+            ResultSet resultSet = statement.executeQuery("Select * from students where  name = '"+username+"'")){
+
+            if(resultSet.next()){
+                return true;
+            }
+            return false;
+
+
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        System.out.println("unexpected behaviour in login function");
+        return false;
+    }
 
 }
 

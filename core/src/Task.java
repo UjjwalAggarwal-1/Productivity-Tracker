@@ -1,3 +1,4 @@
+package core.src;
 public class Task {
     String dateAdded;
     String deadlineDate;

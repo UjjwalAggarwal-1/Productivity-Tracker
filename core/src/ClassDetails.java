@@ -4,7 +4,7 @@ import java.lang.*;
 
 import user.src.*;
 
-public class Class {
+public class ClassDetails {
     private ClassType classType;
     private String time;
     private String room;

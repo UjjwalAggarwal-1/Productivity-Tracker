@@ -38,8 +38,6 @@ public class Notes_Cell{
             }
         });
     }
-
-
     private void jtextFunction (java.awt.event.ActionEvent evt)
     {
         ViewNote n = new ViewNote(this.title);

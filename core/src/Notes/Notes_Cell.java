@@ -45,12 +45,6 @@ public class Notes_Cell{
         ViewNote n = new ViewNote(this.title);
         n.setVisible(true);
     }
-
-
-
-
-
-
     private void functionActionPerformed(){
         ViewNote n = new ViewNote(this.title);
         n.setVisible(true);

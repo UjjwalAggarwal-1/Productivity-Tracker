@@ -1,5 +1,14 @@
 package core.src.CollabWS;
 
+import javax.swing.*;
+import java.awt.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+import core.src.CollabWS.Server;
+import core.src.CollabWS.Client;
+
 public class SC extends javax.swing.JFrame {
 
     /**
@@ -62,12 +71,56 @@ public class SC extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        Server n = new Server();
+        new Server();
+
+        try {
+            ServerSocket skt = new ServerSocket(6001);
+            while(true) {
+                Socket s = skt.accept();
+                DataInputStream din = new DataInputStream(s.getInputStream());
+                Server.dout = new DataOutputStream(s.getOutputStream());
+
+                while(true) {
+                    String msg = din.readUTF();
+                    JPanel panel = Server.formatLabel(msg);
+
+                    JPanel left = new JPanel(new BorderLayout());
+                    left.add(panel, BorderLayout.LINE_START);
+                    Server.vertical.add(left);
+                    Server.f.validate();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         // TODO add your handling code here:
     }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        Client n = new Client();
-        // TODO add your handling code here:
+        new Client();
+
+        try {
+            Socket s = new Socket("127.0.0.1", 6001);
+            DataInputStream din = new DataInputStream(s.getInputStream());
+            Client.dout = new DataOutputStream(s.getOutputStream());
+
+            while(true) {
+                Client.a1.setLayout(new BorderLayout());
+                String msg = din.readUTF();
+                JPanel panel = Client.formatLabel(msg);
+
+                JPanel left = new JPanel(new BorderLayout());
+                left.add(panel, BorderLayout.LINE_START);
+                Client.vertical.add(left);
+
+                Client.vertical.add(Box.createVerticalStrut(15));
+                Client.a1.add(Client.vertical, BorderLayout.PAGE_START);
+
+                Client.f.validate();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**

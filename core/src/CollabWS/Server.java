@@ -110,6 +110,7 @@ public class Server implements ActionListener {
         try {
             String out = text.getText();
 
+
             JPanel p2 = formatLabel(out);
 
             a1.setLayout(new BorderLayout());
@@ -120,7 +121,7 @@ public class Server implements ActionListener {
             vertical.add(Box.createVerticalStrut(15));
 
             a1.add(vertical, BorderLayout.PAGE_START);
-
+            System.out.println(dout);
             dout.writeUTF(out);
 
             text.setText("");

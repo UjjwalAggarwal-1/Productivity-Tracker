@@ -1,7 +1,8 @@
 package core.src.Class;
 import core.src.Class.timetable;
+import javax.swing.*;
 
-public class addClass extends javax.swing.JFrame {
+public class addClass extends javax.swing.JFrame{
     public addClass() {
         initComponents();
     }
@@ -122,6 +123,234 @@ public class addClass extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        if (jComboBox1.getSelectedItem() == "Mon")
+        {
+            switch ((Integer)jSpinner1.getValue()){
+                case 1:
+                    timetable.Mon8.setText(jTextField1.getText());
+                    break;
+                case 2:
+                    timetable.Mon9.setText(jTextField1.getText());
+                    break;
+                case 3:
+                    timetable.cell23.setText(jTextField1.getText());
+                    break;
+                case 4:
+                    timetable.cell30.setText(jTextField1.getText());
+                    break;
+                case 5:
+                    timetable.cell37.setText(jTextField1.getText());
+                    break;
+                case 6:
+                    timetable.cell44.setText(jTextField1.getText());
+                    break;
+                case 7:
+                    timetable.cell51.setText(jTextField1.getText());
+                    break;
+                case 8:
+                    timetable.cell58.setText(jTextField1.getText());
+                    break;
+                case 9:
+                    timetable.cell65.setText(jTextField1.getText());
+                    break;
+                case 10:
+                    timetable.cell72.setText(jTextField1.getText());
+                    break;
+                case 11:
+                    timetable.cell79.setText(jTextField1.getText());
+                    break;
+            }
+        }
+        else if (jComboBox1.getSelectedItem() == "Tue")
+        {
+            switch ((Integer)jSpinner1.getValue()){
+                case 1:
+                    timetable.cell10.setText(jTextField1.getText());
+                    break;
+                case 2:
+                    timetable.cell17.setText(jTextField1.getText());
+                    break;
+                case 3:
+                    timetable.cell24.setText(jTextField1.getText());
+                    break;
+                case 4:
+                    timetable.cell31.setText(jTextField1.getText());
+                    break;
+                case 5:
+                    timetable.cell38.setText(jTextField1.getText());
+                    break;
+                case 6:
+                    timetable.cell45.setText(jTextField1.getText());
+                    break;
+                case 7:
+                    timetable.cell52.setText(jTextField1.getText());
+                    break;
+                case 8:
+                    timetable.cell59.setText(jTextField1.getText());
+                    break;
+                case 9:
+                    timetable.cell66.setText(jTextField1.getText());
+                    break;
+                case 10:
+                    timetable.cell73.setText(jTextField1.getText());
+                    break;
+                case 11:
+                    timetable.cell80.setText(jTextField1.getText());
+                    break;
+            }
+        }
+        else if (jComboBox1.getSelectedItem() == "Wed")
+        {
+            switch ((Integer)jSpinner1.getValue()){
+                case 1:
+                    timetable.cell11.setText(jTextField1.getText());
+                    break;
+                case 2:
+                    timetable.cell18.setText(jTextField1.getText());
+                    break;
+                case 3:
+                    timetable.cell25.setText(jTextField1.getText());
+                    break;
+                case 4:
+                    timetable.cell32.setText(jTextField1.getText());
+                    break;
+                case 5:
+                    timetable.cell39.setText(jTextField1.getText());
+                    break;
+                case 6:
+                    timetable.cell46.setText(jTextField1.getText());
+                    break;
+                case 7:
+                    timetable.cell53.setText(jTextField1.getText());
+                    break;
+                case 8:
+                    timetable.cell60.setText(jTextField1.getText());
+                    break;
+                case 9:
+                    timetable.cell67.setText(jTextField1.getText());
+                    break;
+                case 10:
+                    timetable.cell74.setText(jTextField1.getText());
+                    break;
+                case 11:
+                    timetable.cell81.setText(jTextField1.getText());
+                    break;
+            }
+        }
+        else if (jComboBox1.getSelectedItem() == "Thu")
+        {
+            switch ((Integer)jSpinner1.getValue()){
+                case 1:
+                    timetable.cell12.setText(jTextField1.getText());
+                    break;
+                case 2:
+                    timetable.cell19.setText(jTextField1.getText());
+                    break;
+                case 3:
+                    timetable.cell26.setText(jTextField1.getText());
+                    break;
+                case 4:
+                    timetable.cell33.setText(jTextField1.getText());
+                    break;
+                case 5:
+                    timetable.cell40.setText(jTextField1.getText());
+                    break;
+                case 6:
+                    timetable.cell47.setText(jTextField1.getText());
+                    break;
+                case 7:
+                    timetable.cell54.setText(jTextField1.getText());
+                    break;
+                case 8:
+                    timetable.cell61.setText(jTextField1.getText());
+                    break;
+                case 9:
+                    timetable.cell68.setText(jTextField1.getText());
+                    break;
+                case 10:
+                    timetable.cell75.setText(jTextField1.getText());
+                    break;
+                case 11:
+                    timetable.cell82.setText(jTextField1.getText());
+                    break;
+            }
+        }else if (jComboBox1.getSelectedItem() == "Fri")
+        {
+            switch ((Integer)jSpinner1.getValue()){
+                case 1:
+                    timetable.cell13.setText(jTextField1.getText());
+                    break;
+                case 2:
+                    timetable.cell20.setText(jTextField1.getText());
+                    break;
+                case 3:
+                    timetable.cell27.setText(jTextField1.getText());
+                    break;
+                case 4:
+                    timetable.cell34.setText(jTextField1.getText());
+                    break;
+                case 5:
+                    timetable.cell41.setText(jTextField1.getText());
+                    break;
+                case 6:
+                    timetable.cell48.setText(jTextField1.getText());
+                    break;
+                case 7:
+                    timetable.cell55.setText(jTextField1.getText());
+                    break;
+                case 8:
+                    timetable.cell62.setText(jTextField1.getText());
+                    break;
+                case 9:
+                    timetable.cell69.setText(jTextField1.getText());
+                    break;
+                case 10:
+                    timetable.cell76.setText(jTextField1.getText());
+                    break;
+                case 11:
+                    timetable.cell83.setText(jTextField1.getText());
+                    break;
+            }
+        }
+        else if (jComboBox1.getSelectedItem() == "Sat")
+        {
+            switch ((Integer)jSpinner1.getValue()){
+                case 1:
+                    timetable.cell14.setText(jTextField1.getText());
+                    break;
+                case 2:
+                    timetable.cell21.setText(jTextField1.getText());
+                    break;
+                case 3:
+                    timetable.cell28.setText(jTextField1.getText());
+                    break;
+                case 4:
+                    timetable.cell35.setText(jTextField1.getText());
+                    break;
+                case 5:
+                    timetable.cell42.setText(jTextField1.getText());
+                    break;
+                case 6:
+                    timetable.cell49.setText(jTextField1.getText());
+                    break;
+                case 7:
+                    timetable.cell56.setText(jTextField1.getText());
+                    break;
+                case 8:
+                    timetable.cell63.setText(jTextField1.getText());
+                    break;
+                case 9:
+                    timetable.cell70.setText(jTextField1.getText());
+                    break;
+                case 10:
+                    timetable.cell77.setText(jTextField1.getText());
+                    break;
+                case 11:
+                    timetable.cell84.setText(jTextField1.getText());
+                    break;
+            }
+        }
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked

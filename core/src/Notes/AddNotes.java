@@ -1,5 +1,7 @@
 package core.src.Notes;
 
+import javax.swing.*;
+
 public class AddNotes extends javax.swing.JFrame {
 
     /**
@@ -45,11 +47,11 @@ public class AddNotes extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
+//        jButton2.addActionListener(new java.awt.event.ActionListener() {
+//            public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                jButton2ActionPerformed(evt);
+//            }
+//        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -126,6 +128,15 @@ public class AddNotes extends javax.swing.JFrame {
         n.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+//    jButton1.addActionListener(new java.awt.event.ActionListener() {
+//        public void actionPerformed (java.awt.event.ActionEvent evt) {
+//            jButton1ActionPerformed(evt);
+//        }
+//    });
+    private void jButton1ActionPerformed (java.awt.event.ActionEvent evt){
+        sinNote new_Note = new sinNote();
+
+    }
 
     /**
      * @param args the command line arguments

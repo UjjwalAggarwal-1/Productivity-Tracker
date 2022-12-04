@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Productivity-Tracker.iml" filepath="$PROJECT_DIR$/Productivity-Tracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YashBarge/YashBarge.iml" filepath="$PROJECT_DIR$/YashBarge/YashBarge.iml" />
     </modules>
   </component>
 </project>

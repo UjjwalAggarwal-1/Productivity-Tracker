@@ -1,18 +1,13 @@
 package user.src;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
 import java.lang.*;
 import java.util.regex.*;
-import java.security.*;
 
 public abstract class User {
     private String name;
     private String email;
 
-    public boolean check_email(String email){
+    public boolean checkEmail(String email){
         String regex = "^(.+)@(.+).(.+)$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
@@ -24,7 +19,7 @@ public abstract class User {
             throw new IllegalArgumentException("Invalid Name");
         }
 
-        if (!check_email(email)){
+        if (!checkEmail(email)){
             throw new IllegalArgumentException("Invalid email");
         };
 

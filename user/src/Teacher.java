@@ -27,38 +27,12 @@ public class Teacher extends User{
     }
 
     public void createTable(){
-        final String CONNECTION = "jdbc:mysql://localhost:3306/ProductivityTracker";
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
-
-        try(Connection conn = DriverManager.getConnection(CONNECTION, "root", "safemysql");
-            Statement statement = conn.createStatement()){
-
-            statement.executeUpdate("create table Teachers ( name varchar(100), email varchar(50),"+
-                    "teacherType varchar(50));");
-            System.out.println("teachers table created successfully");
-
-        }catch(SQLException e){
-            System.out.println("HELLO in catch");
-
-            e.printStackTrace();
-        }
-        return;
+        Database.Connection.save("create table Teachers ( name varchar(100), email varchar(50),"+
+                "teacherType varchar(50));");
     }
 
     public void save(){
-        final String CONNECTION = "jdbc:mysql://localhost:3306/ProductivityTracker";
-        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
-        try(Connection conn = DriverManager.getConnection(CONNECTION, "root", "safemysql");
-            Statement statement = conn.createStatement()){
-
-            statement.executeUpdate("insert into Teachers values( '"+this.getName()+"', '"+this.getEmail()
-                    +"', '" + this.getTeacherType()+"');");
-
-            System.out.println("added successfully");
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
-        return;
+        Database.Connection.save("insert into Teachers values( '"+this.getName()+"', '"+this.getEmail()
+                +"', '" + this.getTeacherType()+"');");
     }
 }

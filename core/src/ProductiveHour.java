@@ -1,3 +1,5 @@
+package core.src;
+
 public class ProductiveHour {
     String date ;
     double hours;

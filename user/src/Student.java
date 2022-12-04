@@ -1,11 +1,7 @@
 package user.src;
 
-import java.io.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.*;
-import java.text.*;
-import java.math.*;
 import java.lang.*;
 import java.util.regex.*;
 import java.sql.*;
@@ -39,7 +35,7 @@ public class Student extends User{
         return encryptedpassword;
     }
 
-    public boolean check_bitsId(String bitsId){
+    public boolean checkBitsId(String bitsId){
         String regex = "^[0-9]{4}[ABCHPD0-9][ABH0-9]..[0-9]{4}P$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(bitsId);
@@ -48,7 +44,7 @@ public class Student extends User{
 
     public Student(String name, String email, String bitsId){
         super(name, email);
-        if(!check_bitsId(bitsId)){throw new IllegalArgumentException("Invalid BitsId");}
+        if(!checkBitsId(bitsId)){throw new IllegalArgumentException("Invalid BitsId");}
         this.bitsId = bitsId;
     }
 

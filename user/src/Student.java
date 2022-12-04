@@ -9,7 +9,7 @@ import java.math.*;
 import java.lang.*;
 import java.util.regex.*;
 import java.sql.*;
-
+import Database.Connection;
 
 public class Student extends User{
     private String bitsId;
@@ -50,7 +50,6 @@ public class Student extends User{
         super(name, email);
         if(!check_bitsId(bitsId)){throw new IllegalArgumentException("Invalid BitsId");}
         this.bitsId = bitsId;
-        this.save();
     }
 
     public double getCg() {
@@ -74,73 +73,48 @@ public class Student extends User{
     }
 
     public void createTable(){
-        final String CONNECTION = "jdbc:mysql://localhost:3306/ProductivityTracker";
-        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
-        try(Connection conn = DriverManager.getConnection(CONNECTION, "root", "safemysql");
-            Statement statement = conn.createStatement()){
-
-            statement.executeUpdate("create table Students (id int primary key not null AUTO_INCREMENT, " +
-                    "name varchar(100), email varchar(50), bitsid varchar(50), cg float, password varchar(100) );");
-            System.out.println("created successfully");
-
-        }catch(SQLException e){
-            System.out.println("HELLO in catch");
-
-            e.printStackTrace();
-        }
+        String sql = "create table Students (id int primary key not null AUTO_INCREMENT, " +
+                "name varchar(100), email varchar(50), bitsid varchar(50), cg float, password varchar(100) );";
+        Connection.createTable(sql);
         return;
     }
 
     public void save(){
-        final String CONNECTION = "jdbc:mysql://localhost:3306/ProductivityTracker";
-        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
-        try(Connection conn = DriverManager.getConnection(CONNECTION, "root", "safemysql");
-            Statement statement = conn.createStatement()){
 
-            statement.executeUpdate("insert into Students " +
-                    "(name, email, bitsid, cg, password)" +
-                    " values( '"+this.getName()+"', '"+this.getEmail()
-                    +"', '" + this.getBitsId()+"', 0,'"+ password+"');");
+        String sql = "insert into Students " +
+                "(name, email, bitsid, cg, password)" +
+                " values( '"+this.getName()+"', '"+this.getEmail()
+                +"', '" + this.getBitsId()+"', 0,'"+ password+"');";
 
-            System.out.println("added successfully");
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
+        Connection.save(sql);
         return;
     }
 
-    public boolean login(String username, String Password){
-        final String CONNECTION = "jdbc:mysql://localhost:3306/ProductivityTracker";
-        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
+    public boolean login(String username, String Password) {
 
-        boolean res ;
+        String sql = "Select * from students where  name = '" + username + "'";
 
-        try(Connection conn = DriverManager.getConnection(CONNECTION, "root", "safemysql");
-            Statement statement = conn.createStatement();
-            ResultSet resultSet = statement.executeQuery("Select * from students where  name = '"+username+"'")){
+        try {
 
-            if(resultSet.next()){
+            ResultSet resultSet = Connection.retrieve(sql);
+
+            if (resultSet.next()) {
                 return true;
             }
             return false;
-
-
-        }catch(SQLException e){
+        }catch(Exception e){
             e.printStackTrace();
+            return false;
         }
-        System.out.println("unexpected behaviour in login function");
-        return false;
     }
 
     public int getId(){
-        final String CONNECTION = "jdbc:mysql://localhost:3306/ProductivityTracker";
-        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
 
-        boolean res ;
+        String sql = "Select * from students where  bitsid = '"+this.bitsId+"'";
 
-        try(Connection conn = DriverManager.getConnection(CONNECTION, "root", "safemysql");
-            Statement statement = conn.createStatement();
-            ResultSet resultSet = statement.executeQuery("Select * from students where  bitsid = '"+this.bitsId+"'")){
+        try {
+
+            ResultSet resultSet = Connection.retrieve(sql);
 
             if(resultSet.next()){
                 return resultSet.getInt("id");
@@ -148,13 +122,11 @@ public class Student extends User{
             System.out.println("unexpected behaviour in id function try");
 
             return 1;
-
-
-        }catch(SQLException e){
+        }catch(Exception e){
             e.printStackTrace();
+            System.out.println("unexpected behaviour in id function");
+            return 1;
         }
-        System.out.println("unexpected behaviour in id function");
-        return 1;
     }
 
 }

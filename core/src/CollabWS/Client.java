@@ -43,12 +43,12 @@ public class Client implements ActionListener {
             }
         });
 
-        ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("icons/2.png"));
-        Image i5 = i4.getImage().getScaledInstance(50, 50, Image.SCALE_DEFAULT);
-        ImageIcon i6 = new ImageIcon(i5);
-        JLabel profile = new JLabel(i6);
-        profile.setBounds(40, 10, 50, 50);
-        p1.add(profile);
+//        ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("icons/2.png"));
+//        Image i5 = i4.getImage().getScaledInstance(50, 50, Image.SCALE_DEFAULT);
+//        ImageIcon i6 = new ImageIcon(i5);
+//        JLabel profile = new JLabel(i6);
+//        profile.setBounds(40, 10, 50, 50);
+//        p1.add(profile);
 
         ImageIcon i7 = new ImageIcon(ClassLoader.getSystemResource("icons/video.png"));
         Image i8 = i7.getImage().getScaledInstance(30, 30, Image.SCALE_DEFAULT);

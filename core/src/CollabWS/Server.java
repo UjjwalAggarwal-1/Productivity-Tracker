@@ -1,6 +1,5 @@
 package core.src.CollabWS;
 
-
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
@@ -41,12 +40,12 @@ public class Server implements ActionListener {
             }
         });
 
-        ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("icons/1.png"));
-        Image i5 = i4.getImage().getScaledInstance(50, 50, Image.SCALE_DEFAULT);
-        ImageIcon i6 = new ImageIcon(i5);
-        JLabel profile = new JLabel(i6);
-        profile.setBounds(40, 10, 50, 50);
-        p1.add(profile);
+//        ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("icons/1.png"));
+//        Image i5 = i4.getImage().getScaledInstance(50, 50, Image.SCALE_DEFAULT);
+//        ImageIcon i6 = new ImageIcon(i5);
+//        JLabel profile = new JLabel(i6);
+//        profile.setBounds(40, 10, 50, 50);
+//        p1.add(profile);
 
         ImageIcon i7 = new ImageIcon(ClassLoader.getSystemResource("icons/video.png"));
         Image i8 = i7.getImage().getScaledInstance(30, 30, Image.SCALE_DEFAULT);
@@ -69,7 +68,7 @@ public class Server implements ActionListener {
         morevert.setBounds(420, 20, 10, 25);
         p1.add(morevert);
 
-        JLabel name = new JLabel("Gaitonde");
+        JLabel name = new JLabel("Server");
         name.setBounds(110, 15, 100, 18);
         name.setForeground(Color.WHITE);
         name.setFont(new Font("SAN_SERIF", Font.BOLD, 18));
@@ -91,7 +90,7 @@ public class Server implements ActionListener {
         f.add(text);
 
         JButton send = new JButton("Send");
-        send.setText("Send kar");
+        send.setText("Send");
         send.setBounds(320, 655, 123, 40);
         send.setBackground(new Color(0, 94, 0));
         send.setForeground(Color.BLACK);

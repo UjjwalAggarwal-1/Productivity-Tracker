@@ -3,6 +3,8 @@ import Database.Connection;
 import javax.swing.*;
 import java.awt.*;
 
+import javax.swing.*;
+
 public class AddNotes extends javax.swing.JFrame {
 
     /**
@@ -48,6 +50,7 @@ public class AddNotes extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton2.setText("Back");
+//<<<<<<< Updated upstream
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -58,6 +61,13 @@ public class AddNotes extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+//        jButton2.addActionListener(new java.awt.event.ActionListener() {
+//            public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                jButton2ActionPerformed(evt);
+//            }
+//        });
+
+//>>>>>>> Stashed changes
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -140,12 +150,16 @@ public class AddNotes extends javax.swing.JFrame {
 //        }
 //    });
     private void jButton1ActionPerformed (java.awt.event.ActionEvent evt){
+
         sinNote new_Note = new sinNote(jTextField1.getText(), jTextArea1.getText());
         Connection.save("insert into notes (title, text) values ('" + new_Note.title + "','" + new_Note.content + "');");
         Notes_Cell new_Cell = new Notes_Cell(new_Note.title);
         MyNotes n= new MyNotes();
         n.setVisible(true);
         dispose();
+
+//        sinNote new_Note = new sinNote();
+
 
     }
 

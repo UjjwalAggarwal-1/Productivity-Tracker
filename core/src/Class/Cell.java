@@ -12,6 +12,6 @@ public class Cell extends JButton{
     public Cell(){
         setContentAreaFilled(false);
         setBorder(BorderFactory.createMatteBorder(1,1, 1, 1, Color.black));
-
     }
+
 }

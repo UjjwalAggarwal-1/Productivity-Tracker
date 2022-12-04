@@ -4,12 +4,14 @@ class sinNote
 {
     String title ;
     String content;
+
 //    create table notes(title varchar(50), text varchar(200));
     public sinNote (String title, String content)
     {
         this.title = title;
         this.content = content;
     }
+
 
 }
 public class Notes {

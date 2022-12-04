@@ -1,5 +1,6 @@
 package core.src.LoginPage;
 
+import core.src.CG_Tracker.CgpaTracker;
 import core.src.Class.timetable;
 import core.src.Notes.MyNotes;
 import core.src.Tasks.taskmanager;
@@ -50,14 +51,14 @@ public class HomePage extends javax.swing.JFrame {
         });
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+//                jButton4ActionPerformed(evt);
             }
         });
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
+//        jButton5.addActionListener(new java.awt.event.ActionListener() {
+//            public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                jButton5ActionPerformed(evt);
+//            }
+//        });
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -148,12 +149,12 @@ public class HomePage extends javax.swing.JFrame {
 //        n.setVisible(true);
 //        dispose();
 //    }
-private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    // TODO add your handling code here:
-    timetable n = new timetable();
-    n.setVisible(true);
-    dispose();
-}
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        CgpaTracker n = new CgpaTracker();
+//        n.setVisible(true);
+        dispose();
+    }
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         timetable n = new timetable();

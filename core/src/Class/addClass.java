@@ -1,4 +1,5 @@
 package core.src.Class;
+import core.src.Class.timetable;
 
 public class addClass extends javax.swing.JFrame {
     public addClass() {
@@ -184,7 +185,7 @@ public class addClass extends javax.swing.JFrame {
         if (this.jComboBox1.getSelectedItem() == "Mon")
             switch ((Integer)this.jSpinner1.getValue()) {
                 case 1:
-//                    Mon8
+
                     break;
                 case 2:
                     break;

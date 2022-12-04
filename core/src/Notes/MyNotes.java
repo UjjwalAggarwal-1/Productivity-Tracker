@@ -71,9 +71,13 @@ public class MyNotes extends javax.swing.JFrame {
             Statement statement = conn.createStatement();
             ResultSet resultSet = statement.executeQuery(SQL)){
             System.out.println(resultSet.isClosed());
+            int i = 20;
 
             while(resultSet.next()){
-                jPanel2.add(new Notes_Cell(resultSet.getString("Title")));
+                Notes_Cell newNotesCell = new Notes_Cell(resultSet.getString("Title"));
+                newNotesCell.setBounds(30,i,95,30);
+                i = i + 20;
+                jPanel2.add(newNotesCell);
             }
 
         }catch(SQLException e){

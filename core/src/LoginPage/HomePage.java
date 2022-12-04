@@ -1,7 +1,10 @@
 package core.src.LoginPage;
 
 import core.src.CG_Tracker.CgpaTracker;
+import core.src.CG_Tracker.cgpa;
 import core.src.Class.timetable;
+import core.src.CollabWS.Client;
+import core.src.CollabWS.SC;
 import core.src.CollabWS.Server;
 import core.src.Notes.MyNotes;
 import core.src.Tasks.taskmanager;
@@ -52,7 +55,7 @@ public class HomePage extends javax.swing.JFrame {
         });
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-//                jButton4ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -60,16 +63,16 @@ public class HomePage extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-//        jButton6.addActionListener(new java.awt.event.ActionListener() {
-//            public void actionPerformed(java.awt.event.ActionEvent evt) {
-//                jButton6ActionPerformed(evt);
-//            }
-//        });
-//        jButton7.addActionListener(new java.awt.event.ActionListener() {
-//            public void actionPerformed(java.awt.event.ActionEvent evt) {
-//                jButton7ActionPerformed(evt);
-//            }
-//        });
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Notes");
 
@@ -146,30 +149,28 @@ public class HomePage extends javax.swing.JFrame {
     }
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        taskmanager n = new taskmanager();
-        n.setVisible(true);
-        dispose();
+
     }
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 
-        CgpaTracker n = new CgpaTracker();
-//        n.setVisible(true);
+        cgpa n = new cgpa();
+        n.setVisible(true);
         dispose();
     }
 
-    private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-//        Server n = new Server();
-//        n.setVisible(true);
+        SC n = new SC();
+        n.setVisible(true);
         dispose();
     }
-//    private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-//        // TODO add your handling code here:
-//        timetable n = new timetable();
-//        n.setVisible(true);
-//        dispose();
-//    }
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        timetable n = new timetable();
+        n.setVisible(true);
+        dispose();
+    }
 
     /**
      * @param args the command line arguments

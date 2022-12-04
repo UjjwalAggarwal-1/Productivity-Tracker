@@ -10,8 +10,7 @@ import java.text.*;
 import java.net.*;
 import java.io.*;
 
-public class
-Client implements ActionListener {
+public class Client implements ActionListener {
 
     JTextField text;
     static JPanel a1;
@@ -21,7 +20,7 @@ Client implements ActionListener {
 
     static DataOutputStream dout;
 
-    Client() {
+    public Client() {
 
         f.setLayout(null);
 

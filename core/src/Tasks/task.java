@@ -3,9 +3,9 @@ package core.src.Tasks;
 public class task {
     private String title;
     private String description;
-    private String deadline;
+    private java.sql.Date deadline;
 
-    task(String title, String description, String deadline) {
+    task(String title, String description, java.sql.Date deadline) {
         this.title = title;
         this.description = description;
         this.deadline = deadline;
@@ -17,7 +17,7 @@ public class task {
     public String getDescription() {
         return description;
     }
-    public String getDeadline() {
+    public java.sql.Date getDeadline() {
         return deadline;
     }
 
@@ -27,7 +27,7 @@ public class task {
     public void setDescription(String description) {
         this.description = description;
     }
-    public void setDeadline(String deadline) {
+    public void setDeadline(java.sql.Date deadline) {
         this.deadline = deadline;
     }
 }

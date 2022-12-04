@@ -1,5 +1,13 @@
 package core.src.Notes;
 
+import Database.Connection;
+import core.src.Class.Cell;
+
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class MyNotes extends javax.swing.JFrame {
 
     /**
@@ -56,6 +64,21 @@ public class MyNotes extends javax.swing.JFrame {
             }
         });
 
+        String SQL = "Select * from notes;";
+        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
+        try(java.sql.Connection conn = DriverManager.getConnection(Connection.CONNECTION, Connection.mysqlUser, Connection.mysqlPassword);
+            Statement statement = conn.createStatement();
+            ResultSet resultSet = statement.executeQuery(SQL)){
+            System.out.println(resultSet.isClosed());
+
+            while(resultSet.next()){
+                jPanel2.add(new Notes_Cell(resultSet.getString("Title")));
+            }
+
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -86,6 +109,7 @@ public class MyNotes extends javax.swing.JFrame {
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())
         );
+
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

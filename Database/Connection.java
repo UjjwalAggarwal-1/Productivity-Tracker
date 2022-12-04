@@ -7,11 +7,11 @@ import java.sql.Statement;
 
 public class Connection {
 
-    private static String mysqlUser = "root";
-    private static String mysqlPassword = "safemysql";
+    public static String mysqlUser = "raksh";
+    public static String mysqlPassword = "pss";
     private static String mysqlPort = "3306";
     private static String mysqlDatabase = "ProductivityTracker";
-    final static String CONNECTION = "jdbc:mysql://localhost:" +mysqlPort +"/" +mysqlDatabase;
+    public final static String CONNECTION = "jdbc:mysql://localhost:" +mysqlPort +"/" +mysqlDatabase;
 
     public static void save(String SQL){
 
@@ -40,9 +40,10 @@ public class Connection {
     public static ResultSet retrieve(String Sql){
 
         try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
-        try(java.sql.Connection conn = DriverManager.getConnection(CONNECTION, mysqlUser, mysqlPassword);
+        try{java.sql.Connection conn = DriverManager.getConnection(CONNECTION, mysqlUser, mysqlPassword);
             Statement statement = conn.createStatement();
-            ResultSet resultSet = statement.executeQuery(Sql)){
+            ResultSet resultSet = statement.executeQuery(Sql);
+            System.out.println(resultSet.isClosed());
            return resultSet;
         }catch(SQLException e){
             e.printStackTrace();

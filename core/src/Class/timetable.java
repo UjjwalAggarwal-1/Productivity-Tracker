@@ -148,7 +148,7 @@ public class timetable extends javax.swing.JFrame {
         cell7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel2.add(cell7);
 
-        cell8.setText("8");
+        cell8.setText("1");
         cell8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel2.add(cell8);
         jPanel2.add(Mon8);
@@ -158,7 +158,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel2.add(cell13);
         jPanel2.add(cell14);
 
-        cell15.setText("9");
+        cell15.setText("2");
         cell15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel2.add(cell15);
         jPanel2.add(Mon9);
@@ -168,7 +168,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel2.add(cell20);
         jPanel2.add(cell21);
 
-        cell22.setText("10");
+        cell22.setText("3");
         cell22.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel2.add(cell22);
         jPanel2.add(cell23);
@@ -178,7 +178,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel2.add(cell27);
         jPanel2.add(cell28);
 
-        cell29.setText("11");
+        cell29.setText("4");
         cell29.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel2.add(cell29);
         jPanel2.add(cell30);
@@ -188,7 +188,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel2.add(cell34);
         jPanel2.add(cell35);
 
-        cell36.setText("12");
+        cell36.setText("5");
         cell36.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cell36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,7 +203,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel2.add(cell41);
         jPanel2.add(cell42);
 
-        cell43.setText("1");
+        cell43.setText("6");
         cell43.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel2.add(cell43);
         jPanel2.add(cell44);
@@ -213,7 +213,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel2.add(cell48);
         jPanel2.add(cell49);
 
-        cell50.setText("2");
+        cell50.setText("7");
         cell50.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel2.add(cell50);
         jPanel2.add(cell51);
@@ -223,7 +223,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel2.add(cell55);
         jPanel2.add(cell56);
 
-        cell57.setText("3");
+        cell57.setText("8");
         cell57.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel2.add(cell57);
         jPanel2.add(cell58);
@@ -233,7 +233,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel2.add(cell62);
         jPanel2.add(cell63);
 
-        cell64.setText("4");
+        cell64.setText("9");
         cell64.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel2.add(cell64);
         jPanel2.add(cell65);
@@ -243,7 +243,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel2.add(cell69);
         jPanel2.add(cell70);
 
-        cell71.setText("5");
+        cell71.setText("10");
         cell71.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel2.add(cell71);
         jPanel2.add(cell72);
@@ -253,7 +253,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel2.add(cell76);
         jPanel2.add(cell77);
 
-        cell78.setText("6");
+        cell78.setText("11");
         cell78.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel2.add(cell78);
         jPanel2.add(cell79);
@@ -262,6 +262,7 @@ public class timetable extends javax.swing.JFrame {
         jPanel2.add(cell82);
         jPanel2.add(cell83);
         jPanel2.add(cell84);
+//        if ()
 
         jButton1.setText("Add class");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

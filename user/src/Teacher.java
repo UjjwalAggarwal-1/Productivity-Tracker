@@ -26,11 +26,6 @@ public class Teacher extends User{
         return teacherType;
     }
 
-    public void createTable(){
-        Database.Connection.save("create table Teachers ( name varchar(100), email varchar(50),"+
-                "teacherType varchar(50));");
-    }
-
     public void save(){
         Database.Connection.save("insert into Teachers values( '"+this.getName()+"', '"+this.getEmail()
                 +"', '" + this.getTeacherType()+"');");

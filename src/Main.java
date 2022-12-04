@@ -22,10 +22,12 @@ public class Main {
 
         //notes
         Connection.createTable("create table notes(title varchar(50), text text);");
+
+        //tasks
         Connection.createTable("create table tasks(title varchar(50), description text, deadline date);");
 
-//        Connection.createTable();
-//        
-//        Connection.createTable();
+        //teachers
+        Connection.createTable("create table Teachers ( name varchar(100), email varchar(50),"+
+                "teacherType varchar(50));");
     }
 }

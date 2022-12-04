@@ -55,16 +55,16 @@ public class Assignment extends  Evaluative{
     }
 
     public int getId(){
-       try{
-            ResultSet resultSet = Connection.retrieve("Select * from assignments where name = '"+this.name+"'");
-            if(resultSet.next()) {
-                return resultSet.getInt("id");
-            }
-            System.out.println("why this printout?");
+        String sql = "Select * from assignments where name = '"+this.name+"'";
+        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
+        try(java.sql.Connection conn = DriverManager.getConnection(Connection.CONNECTION, Connection.mysqlUser, Connection.mysqlPassword);
+            Statement statement = conn.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql)){
+            if(resultSet.next()){return resultSet.getInt("Id");}return 1;
+
+        }catch(SQLException e){
+            e.printStackTrace();
             return 1;
-       }catch (Exception e){
-           e.printStackTrace();
-           return 1;
-       }
+        }
    }
 }

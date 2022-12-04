@@ -7,8 +7,8 @@ import java.sql.Statement;
 
 public class Connection {
 
-    public static String mysqlUser = "raksh";
-    public static String mysqlPassword = "pss";
+    public static String mysqlUser = "root";
+    public static String mysqlPassword = "safemysql";
     private static String mysqlPort = "3306";
     private static String mysqlDatabase = "ProductivityTracker";
     public final static String CONNECTION = "jdbc:mysql://localhost:" +mysqlPort +"/" +mysqlDatabase;
@@ -40,10 +40,9 @@ public class Connection {
     public static ResultSet retrieve(String Sql){
 
         try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
-        try{java.sql.Connection conn = DriverManager.getConnection(CONNECTION, mysqlUser, mysqlPassword);
+        try(java.sql.Connection conn = DriverManager.getConnection(CONNECTION, mysqlUser, mysqlPassword);
             Statement statement = conn.createStatement();
-            ResultSet resultSet = statement.executeQuery(Sql);
-            System.out.println(resultSet.isClosed());
+            ResultSet resultSet = statement.executeQuery(Sql)){
            return resultSet;
         }catch(SQLException e){
             e.printStackTrace();

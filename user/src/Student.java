@@ -88,17 +88,16 @@ public class Student extends User{
 
         String sql = "Select * from students where  name = '" + username + "'";
 
-        try {
-
-            ResultSet resultSet = Connection.retrieve(sql);
-
-            if (resultSet.next()) {
+        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
+        try(java.sql.Connection conn = DriverManager.getConnection(Connection.CONNECTION, Connection.mysqlUser, Connection.mysqlPassword);
+            Statement statement = conn.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql)){
+            if(resultSet.next()){
                 return true;
-            }
-            return false;
-        }catch(Exception e){
+            }return false;
+        }catch(SQLException e){
             e.printStackTrace();
-            return false;
+            return true;
         }
     }
 
@@ -106,19 +105,14 @@ public class Student extends User{
 
         String sql = "Select * from students where  bitsid = '"+this.bitsId+"'";
 
-        try {
+        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
+        try(java.sql.Connection conn = DriverManager.getConnection(Connection.CONNECTION, Connection.mysqlUser, Connection.mysqlPassword);
+            Statement statement = conn.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql)){
+            if(resultSet.next()){return resultSet.getInt("Id");}return 1;
 
-            ResultSet resultSet = Connection.retrieve(sql);
-
-            if(resultSet.next()){
-                return resultSet.getInt("id");
-            }
-            System.out.println("unexpected behaviour in id function try");
-
-            return 1;
-        }catch(Exception e){
+        }catch(SQLException e){
             e.printStackTrace();
-            System.out.println("unexpected behaviour in id function");
             return 1;
         }
     }

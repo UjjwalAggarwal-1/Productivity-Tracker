@@ -10,7 +10,8 @@ import java.text.*;
 import java.net.*;
 import java.io.*;
 
-public class Client implements ActionListener {
+public class
+Client implements ActionListener {
 
     JTextField text;
     static JPanel a1;
@@ -25,12 +26,12 @@ public class Client implements ActionListener {
         f.setLayout(null);
 
         JPanel p1 = new JPanel();
-        p1.setBackground(new Color(7, 94, 84));
+        p1.setBackground(Color.gray);
         p1.setBounds(0, 0, 450, 70);
         p1.setLayout(null);
         f.add(p1);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/3.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("core/src/CollabWS/icons/3.png"));
         Image i2 = i1.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel back = new JLabel(i3);
@@ -50,21 +51,21 @@ public class Client implements ActionListener {
 //        profile.setBounds(40, 10, 50, 50);
 //        p1.add(profile);
 
-        ImageIcon i7 = new ImageIcon(ClassLoader.getSystemResource("icons/video.png"));
+        ImageIcon i7 = new ImageIcon(ClassLoader.getSystemResource("core/src/CollabWS/icons/video.png"));
         Image i8 = i7.getImage().getScaledInstance(30, 30, Image.SCALE_DEFAULT);
         ImageIcon i9 = new ImageIcon(i8);
         JLabel video = new JLabel(i9);
         video.setBounds(300, 20, 30, 30);
         p1.add(video);
 
-        ImageIcon i10 = new ImageIcon(ClassLoader.getSystemResource("icons/phone.png"));
+        ImageIcon i10 = new ImageIcon(ClassLoader.getSystemResource("core/src/CollabWS/icons/phone.png"));
         Image i11 = i10.getImage().getScaledInstance(35, 30, Image.SCALE_DEFAULT);
         ImageIcon i12 = new ImageIcon(i11);
         JLabel phone = new JLabel(i12);
         phone.setBounds(360, 20, 35, 30);
         p1.add(phone);
 
-        ImageIcon i13 = new ImageIcon(ClassLoader.getSystemResource("icons/3icon.png"));
+        ImageIcon i13 = new ImageIcon(ClassLoader.getSystemResource("core/src/CollabWS/icons/3icon.png"));
         Image i14 = i13.getImage().getScaledInstance(10, 25, Image.SCALE_DEFAULT);
         ImageIcon i15 = new ImageIcon(i14);
         JLabel morevert = new JLabel(i15);

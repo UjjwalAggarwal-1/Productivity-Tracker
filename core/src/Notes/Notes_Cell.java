@@ -18,10 +18,22 @@ public class Notes_Cell extends JButton{
         setContentAreaFilled(false);
         setBorder(BorderFactory.createMatteBorder(1,1, 1, 1, Color.black));
 //        jText = new jButton();
+        jText = new javax.swing.JButton(thing);
         jText.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
-        jText.setText(thing);
-        setVisible(true);
+//        jText.setText(thing);
+        jText.setBounds(50,100,95,30);
+        jText.setVisible(true);
+
     }
+//    jText.addActionListener(new java.awt.event.ActionListener() {
+//        public void actionPerformed(java.awt.event.ActionEvent evt) {
+//            jTextActionPerformed(evt);
+//        }
+//    });
+//    private void jTextActionPerformed(java.awt.event.ActionEvent evt){
+//
+//
+//    }
    
     public void setjText (String thing)       {
         jText.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N

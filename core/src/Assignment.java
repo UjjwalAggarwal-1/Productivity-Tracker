@@ -45,14 +45,6 @@ public class Assignment extends  Evaluative{
         return teamMembers;
     }
 
-    public void createTable(){
-        Connection.createTable("create table Assignments(id int primary key not null AUTO_INCREMENT," +
-                "name varchar(100), date date, " +
-                "course varchar(50), totalmarks int, examtype varchar(50), isgroup boolean);");
-        Connection.createTable(" create table assignment_student(assignment int, student int);");
-        return;
-    }
-
     public void save(){
         Connection.save("insert into assignments (name,date,course, totalmarks, examtype, isgroup)" +
                 " values( '" +

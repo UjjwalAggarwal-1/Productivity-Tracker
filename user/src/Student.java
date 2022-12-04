@@ -72,12 +72,6 @@ public class Student extends User{
         this.password = encrypt(password);
     }
 
-    public void createTable(){
-        String sql = "create table Students (id int primary key not null AUTO_INCREMENT, " +
-                "name varchar(100), email varchar(50), bitsid varchar(50), cg float, password varchar(100) );";
-        Connection.createTable(sql);
-        return;
-    }
 
     public void save(){
 

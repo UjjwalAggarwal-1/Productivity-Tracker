@@ -22,7 +22,7 @@ public class Main {
 
         //notes
         Connection.createTable("create table notes(title varchar(50), text text);");
-        Connection.createTable("create table tasks(title varchar(50), description text, deadline varchar(50)");
+        Connection.createTable("create table tasks(title varchar(50), description text, deadline date);");
 
 //        Connection.createTable();
 //        

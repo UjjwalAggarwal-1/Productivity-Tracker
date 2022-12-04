@@ -25,15 +25,15 @@ public class Notes_Cell extends JButton{
 //        jText = new javax.swing.JButton(thing);
         setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         setText(thing);
-        setBounds(50,100,95,30);
+        setBounds(50,100,305,30);
         setVisible(true);
 
     }
-    public void addActionListener(new java.awt.event.ActionListener(){
-        public void actionPerformed(java.awt.event.ActionEvent evt){
-
-        }
-    });
+//    public void addActionListener(new java.awt.event.ActionListener(){
+//        public void actionPerformed(java.awt.event.ActionEvent evt){
+//
+//        }
+//    });
 //    public void addActionListener(new java.awt.event.ActionListener() {
 //        public void actionPerformed(java.awt.event.ActionEvent evt ) {
 //            jTextActionPerformed(evt);

@@ -201,6 +201,7 @@ public class AddTask extends javax.swing.JFrame {
          Connection.save("insert into tasks (title, description, deadline) values ('" + jTextArea1.getText() + "','" + jTextArea2.getText() + "', date '" +
                  jSpinner2.getValue() + "-" + parseMonth(jComboBox1.getSelectedItem().toString()) + "-" + jSpinner1.getValue()
                  + "');");
+         dispose();
     }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:

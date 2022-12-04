@@ -75,7 +75,7 @@ public class MyNotes extends javax.swing.JFrame {
 
             while(resultSet.next()){
                 Notes_Cell newNotesCell = new Notes_Cell(resultSet.getString("Title"));
-                newNotesCell.setBounds(30,i,95,30);
+                newNotesCell.setBounds(30,i,1005,30);
                 i = i + 20;
                 jPanel2.add(newNotesCell);
             }

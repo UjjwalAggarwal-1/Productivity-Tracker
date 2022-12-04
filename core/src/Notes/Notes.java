@@ -1,5 +1,11 @@
 package core.src.Notes;
 
+class sinNote
+{
+    String title ;
+    String content;
+
+}
 public class Notes {
 
     /**

@@ -1,5 +1,13 @@
 package core.src.Tasks;
 
+import Database.Connection;
+import core.src.Notes.Notes_Cell;
+
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class taskmanager extends javax.swing.JFrame {
     public taskmanager() {
         initComponents();
@@ -24,7 +32,24 @@ public class taskmanager extends javax.swing.JFrame {
                 jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGap(0, 261, Short.MAX_VALUE)
         );
+        String SQL = "Select * from tasks;";
+        try{Class.forName("com.mysql.cj.jdbc.Driver");}catch (ClassNotFoundException e){e.printStackTrace();}
+        try(java.sql.Connection conn = DriverManager.getConnection(Connection.CONNECTION, Connection.mysqlUser, Connection.mysqlPassword);
+            Statement statement = conn.createStatement();
+            ResultSet resultSet = statement.executeQuery(SQL)){
+            System.out.println(resultSet.isClosed());
+            int i = 20;
 
+            while(resultSet.next()){
+                DisplayTask newTask = new DisplayTask(resultSet.getString("Title"), resultSet.getString("description"), resultSet.getDate("Deadline"));
+                newTask.setBounds(30,i,255,90);
+                i = i + 90;
+                jPanel2.add(newTask);
+            }
+
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel1.setText("Task");
 

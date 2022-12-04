@@ -7,8 +7,8 @@ import java.sql.Statement;
 
 public class Connection {
 
-    public static String mysqlUser = "raksh";
-    public static String mysqlPassword = "pss";
+    public static String mysqlUser = "root";
+    public static String mysqlPassword = "H@rryPotter-1";
     private static String mysqlPort = "3306";
     private static String mysqlDatabase = "ProductivityTracker";
     public final static String CONNECTION = "jdbc:mysql://localhost:" +mysqlPort +"/" +mysqlDatabase;

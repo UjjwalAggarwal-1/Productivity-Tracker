@@ -4,6 +4,7 @@ public class task {
     private String title;
     private String description;
     private java.sql.Date deadline;
+//    private
 
     task(String title, String description, java.sql.Date deadline) {
         this.title = title;

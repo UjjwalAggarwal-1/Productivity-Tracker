@@ -2,15 +2,7 @@ package core.src.LoginPage;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author saumyasharma
- */
 public class NewJFrame extends javax.swing.JFrame {
-
-    /**
-     * Creates new form NewJFrame
-     */
     public NewJFrame() {
         initComponents();
     }
